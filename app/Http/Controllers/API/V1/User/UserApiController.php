@@ -154,7 +154,7 @@ class UserApiController extends Controller
             'position' => function ($q) {
                 $q->select('id', 'name');
             }
-        ])->paginate(perPage: $count, page: $page);
+        ])->orderByDesc('id')->paginate(perPage: $count, page: $page);
     }
 
     /**
